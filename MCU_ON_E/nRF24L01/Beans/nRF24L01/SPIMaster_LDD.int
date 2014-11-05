@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface>
+  <Name>SPIMaster_LDD</Name>
+  <Description>BasicProperties</Description>
+  <Author />
+  <Version>01.000</Version>
+  <FileVersion>1</FileVersion>
+  <MethodList>
+    <Method>
+      <TMthdItem>
+        <Name>Init</Name>
+        <Symbol>Init</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint>Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc.&#xD;
+
+If the "Enable in init. code" is set to "yes" value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn't to be generated. &#xD;
+
+This method can be called only once. Before the second call of Init() the Deinit() must be called first.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <ReadOnly>true</ReadOnly>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_BoolStyle>DROPDOWN</UI_BoolStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>false</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <DefaultValue>true</DefaultValue>
+        <Popup>false</Popup>
+        <PublicMethod>true</PublicMethod>
+        <IsAssembler>false</IsAssembler>
+        <InDefinition>true</InDefinition>
+        <Mode>meiAlwReq_!Exist</Mode>
+        <ReturnType>LDD_TDeviceData*</ReturnType>
+        <RetHint>Device data structure pointer.</RetHint>
+        <ParamCount>1</ParamCount>
+        <Parameter>
+          <ParName>UserDataPtr</ParName>
+          <ParType>LDD_TUserData</ParType>
+          <ParPassing>Address</ParPassing>
+          <ParHint>Pointer to the user or RTOS specific data. This pointer will be passed as an event or callback parameter.</ParHint>
+        </Parameter>
+        <Scope>PRIVATE</Scope>
+        <Declarations>
+          <ANSIC>LDD_TDeviceData* #M#_#C#(LDD_TUserData *UserDataPtr)</ANSIC>
+        </Declarations>
+      </TMthdItem>
+    </Method>
+    <Method>
+      <TMthdItem>
+        <Name>Enable</Name>
+        <Symbol>Enable</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint>This method enables SPI device. This method is intended to be used together with &lt;a href="#Disable"&gt;Disable()&lt;/a&gt; method to temporary switch On/Off the device after the device is initialized. &#xD;
+
+This method is required if the &lt;a href="SPIMaster_LDDProperties.html#InitEnable"&gt;Enabled in init. code&lt;/a&gt; property is set to "no" value.</Hint>
+        <ItemLevel>ADVANCED</ItemLevel>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_BoolStyle>DROPDOWN</UI_BoolStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>1</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <DefaultValue>false</DefaultValue>
+        <Popup>false</Popup>
+        <PublicMethod>true</PublicMethod>
+        <IsAssembler>true</IsAssembler>
+        <InDefinition>true</InDefinition>
+        <Mode>meiAlwReq_!Exist</Mode>
+        <ReturnType>LDD_TError</ReturnType>
+        <RetHint>Error code, possible codes:\n  ERR_OK - OK\n  ERR_SPEED - The device doesn't work in the active clock configuration</RetHint>
+        <ParamCount>1</ParamCount>
+        <Parameter>
+          <ParName>DeviceDataPtr</ParName>
+          <ParType>LDD_TDeviceData</ParType>
+          <ParPassing>Address</ParPassing>
+          <ParHint>Device data structure pointer returned by &lt;a href="#Init"&gt;Init&lt;/a&gt; method.</ParHint>
+        </Parameter>
+        <Scope>PRIVATE</Scope>
+        <Declarations>
+          <ANSIC>LDD_TError #M#_#C#(LDD_TDeviceData *DeviceDataPtr)</ANSIC>
+        </Declarations>
+      </TMthdItem>
+    </Method>
+    <Method>
+      <TMthdItem>
+        <Name>SendBlock</Name>
+        <Symbol>SendBlock</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint>This method sends a block of characters. The method returns ERR_BUSY when the previous block transmission is not completed. The method &lt;a href="#CancelBlockTransmission"&gt;CancelBlockTransmission&lt;/a&gt; can be used to cancel a transmit operation.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_BoolStyle>DROPDOWN</UI_BoolStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <DefaultValue>true</DefaultValue>
+        <Popup>false</Popup>
+        <PublicMethod>true</PublicMethod>
+        <IsAssembler>true</IsAssembler>
+        <InDefinition>true</InDefinition>
+        <Mode>meiAlwReq_!Exist</Mode>
+        <ReturnType>LDD_TError</ReturnType>
+        <RetHint>Error code, possible codes:\n     ERR_OK - OK\n     ERR_SPEED - This device does not work in the active clock configuration\n     ERR_DISABLED - Component is disabled\n     ERR_BUSY - The previous transmit request is pending</RetHint>
+        <ParamCount>3</ParamCount>
+        <Parameter>
+          <ParName>DeviceDataPtr</ParName>
+          <ParType>LDD_TDeviceData</ParType>
+          <ParPassing>Address</ParPassing>
+          <ParHint>Device data structure pointer returned by &lt;a href="#Init"&gt;Init&lt;/a&gt; method.</ParHint>
+        </Parameter>
+        <Parameter>
+          <ParName>BufferPtr</ParName>
+          <ParType>LDD_TData</ParType>
+          <ParPassing>Address</ParPassing>
+          <ParHint>Pointer to the block of data to send.</ParHint>
+        </Parameter>
+        <Parameter>
+          <ParName>Size</ParName>
+          <ParType>uint16_t</ParType>
+          <ParPassing>Value</ParPassing>
+          <ParHint>Number of characters in the buffer.</ParHint>
+        </Parameter>
+        <Scope>PRIVATE</Scope>
+        <Declarations>
+          <ANSIC>LDD_TError #M#_#C#(LDD_TDeviceData *DeviceDataPtr, LDD_TData *BufferPtr, uint16_t Size)</ANSIC>
+        </Declarations>
+      </TMthdItem>
+    </Method>
+    <Method>
+      <TMthdItem>
+        <Name>ReceiveBlock</Name>
+        <Symbol>ReceiveBlock</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint>This method specifies the number of data to receive. The method returns ERR_BUSY until the specified number of characters is received. The method &lt;a href="#CancelBlockReception"&gt;CancelBlockReception&lt;/a&gt; can be used to cancel a running receive operation.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_BoolStyle>DROPDOWN</UI_BoolStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <DefaultValue>true</DefaultValue>
+        <Popup>false</Popup>
+        <PublicMethod>true</PublicMethod>
+        <IsAssembler>true</IsAssembler>
+        <InDefinition>true</InDefinition>
+        <Mode>meiAlwReq_!Exist</Mode>
+        <ReturnType>LDD_TError</ReturnType>
+        <RetHint>Error code, possible codes:\n     ERR_OK - OK\n     ERR_SPEED - This device does not work in the active clock configuration\n     ERR_DISABLED - Component is disabled\n     ERR_BUSY - The previous receive request is pending</RetHint>
+        <ParamCount>3</ParamCount>
+        <Parameter>
+          <ParName>DeviceDataPtr</ParName>
+          <ParType>LDD_TDeviceData</ParType>
+          <ParPassing>Address</ParPassing>
+          <ParHint>Device data structure pointer returned by &lt;a href="#Init"&gt;Init&lt;/a&gt; method.</ParHint>
+        </Parameter>
+        <Parameter>
+          <ParName>BufferPtr</ParName>
+          <ParType>LDD_TData</ParType>
+          <ParPassing>Address</ParPassing>
+          <ParHint>Pointer to A buffer where received characters will be stored.</ParHint>
+        </Parameter>
+        <Parameter>
+          <ParName>Size</ParName>
+          <ParType>uint16_t</ParType>
+          <ParPassing>Value</ParPassing>
+          <ParHint>Size of the block</ParHint>
+        </Parameter>
+        <Scope>PRIVATE</Scope>
+        <Declarations>
+          <ANSIC>LDD_TError #M#_#C#(LDD_TDeviceData *DeviceDataPtr, LDD_TData *BufferPtr, uint16_t Size)</ANSIC>
+        </Declarations>
+      </TMthdItem>
+    </Method>
+  </MethodList>
+  <Registration>
+    <Template>SPIMaster_LDD</Template>
+  </Registration>
+  <UserTypes>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>uint8_t</Name>
+      <Hint />
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>\n</PreparedHint>
+      <Type />
+      <HWTestType>8bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TRetypeType</UsrType>
+      <Name>uint16_t</Name>
+      <Hint />
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>typedef word uint16_t ;\n</PreparedHint>
+      <Type>16bit unsigned</Type>
+    </Type>
+    <Type>
+      <UsrType>TRetypeType</UsrType>
+      <Name>uint32_t</Name>
+      <Hint />
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>typedef dword uint32_t ;\n</PreparedHint>
+      <Type>32bit unsigned</Type>
+    </Type>
+    <Type>
+      <UsrType>TRetypeType</UsrType>
+      <Name>LDD_SPIMASTER_TError</Name>
+      <Hint>Error flags.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>yes</GenerateHelp>
+      <PreparedHint>typedef uint32_t LDD_SPIMASTER_TError ;/* Error flags. */\n</PreparedHint>
+      <Type>uint32_t</Type>
+    </Type>
+    <Type>
+      <UsrType>TRetypeType</UsrType>
+      <Name>LDD_DMA_TErrorFlags</Name>
+      <Hint>DMA channel transfer error flags. (For further information see the DMAChannel_LDD component documentation.)</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>typedef uint32_t LDD_DMA_TErrorFlags ;/* DMA channel transfer error flags. (For further information see the DMAChannel_LDD component documentation.) */\n</PreparedHint>
+      <Type>uint32_t</Type>
+    </Type>
+    <Type>
+      <UsrType>TRetypeType</UsrType>
+      <Name>LDD_SPIMASTER_TDataWidth</Name>
+      <Hint>Bit length</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>typedef word LDD_SPIMASTER_TDataWidth ;/* Bit length */\n</PreparedHint>
+      <Type>16bit unsigned</Type>
+    </Type>
+    <Type>
+      <UsrType>TEnumType</UsrType>
+      <Name>LDD_SPIMASTER_TParity</Name>
+      <Hint>Parity type&lt;br/&gt;&lt;dl&gt;&lt;dt&gt;PARITY_NONE&lt;/dt&gt;&lt;dd&gt;No parity&lt;/dd&gt;&lt;dt&gt;PARITY_ODD&lt;/dt&gt;&lt;dd&gt;Odd parity&lt;/dd&gt;&lt;dt&gt;PARITY_EVEN&lt;/dt&gt;&lt;dd&gt;Even parity&lt;/dd&gt;&lt;/dl&gt;</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>typedef enum { /* Parity type&lt;br/&gt;&lt;dl&gt;&lt;dt&gt;PARITY_NONE&lt;/dt&gt;&lt;dd&gt;No parity&lt;/dd&gt;&lt;dt&gt;PARITY_ODD&lt;/dt&gt;&lt;dd&gt;Odd parity&lt;/dd&gt;&lt;dt&gt;PARITY_EVEN&lt;/dt&gt;&lt;dd&gt;Even parity&lt;/dd&gt;&lt;/dl&gt; */\n
+    PARITY_NONE,\n
+    PARITY_ODD,\n
+    PARITY_EVEN\n
+  } LDD_SPIMASTER_TParity;\n</PreparedHint>
+      <EnumCount>3</EnumCount>
+      <Enum>PARITY_NONE</Enum>
+      <Enum>PARITY_ODD</Enum>
+      <Enum>PARITY_EVEN</Enum>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>TComData</Name>
+      <Hint>User type for communication. Size of this type depends on the communication data width. See &lt;a href="SyncMaster_LDD.html"&gt;General Info&lt;/a&gt;.</Hint>
+      <Generate>no</Generate>
+      <Unique>yes</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* User type for communication. Size of this type depends on the communication data width. See &lt;a href="SyncMaster_LDD.html"&gt;General Info&lt;/a&gt;. */\n</PreparedHint>
+      <Type />
+      <HWTestType>16bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TEnumType</UsrType>
+      <Name>TDMATransferId</Name>
+      <Hint>DMA transfer identification</Hint>
+      <Generate>no</Generate>
+      <Unique>yes</Unique>
+      <GenerateHelp>yes</GenerateHelp>
+      <PreparedHint>typedef enum { /* DMA transfer identification */\n
+    enum\n
+  } &lt;i&gt;ComponentName_&lt;/i&gt;TDMATransferId;\n</PreparedHint>
+      <EnumCount>1</EnumCount>
+      <Enum>enum</Enum>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TUserDataPtr</Name>
+      <Hint>Pointer to the RTOS device structure. This pointer will be passed to all events as parameter.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* Pointer to the RTOS device structure. This pointer will be passed to all events as parameter. */\n</PreparedHint>
+      <Type />
+      <HWTestType>16bit signed</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TDeviceDataPtr</Name>
+      <Hint />
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>\n</PreparedHint>
+      <Type />
+      <HWTestType>16bit signed</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TError</Name>
+      <Hint />
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>\n</PreparedHint>
+      <Type />
+      <HWTestType>16bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TEventMask</Name>
+      <Hint>Event mask type.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* Event mask type. */\n</PreparedHint>
+      <Type />
+      <HWTestType>32bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TData</Name>
+      <Hint />
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>void\n</PreparedHint>
+      <Type>void</Type>
+      <HWTestType>pointer</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TDeviceData</Name>
+      <Hint>Pointer to this type, specifying the private component state information and data, has to be passed as a parameter to every component's method. LDD global type (not specific for component and component instance).</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>void /* Pointer to this type, specifying the private component state information and data, has to be passed as a parameter to every component's method. LDD global type (not specific for component and component instance). */\n</PreparedHint>
+      <Type>void</Type>
+      <HWTestType>pointer</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TUserData</Name>
+      <Hint>Pointer to this type specifying the user or RTOS specific data will be passed as an event or callback parameter. LDD global type (not specific for component and component instance).</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>void /* Pointer to this type specifying the user or RTOS specific data will be passed as an event or callback parameter. LDD global type (not specific for component and component instance). */\n</PreparedHint>
+      <Type>void</Type>
+      <HWTestType>pointer</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TDeviceData*</Name>
+      <Hint>Pointer to this type, specifying the private component state information and data, has to be passed as a parameter to every component's method. LDD global type (not specific for component and component instance).</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>void* /* Pointer to this type, specifying the private component state information and data, has to be passed as a parameter to every component's method. LDD global type (not specific for component and component instance). */\n</PreparedHint>
+      <Type>void*</Type>
+      <HWTestType>pointer</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TPinMask</Name>
+      <Hint>Bit mask of pins that need to be connected</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* Bit mask of pins that need to be connected */\n</PreparedHint>
+      <Type />
+      <HWTestType>32bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TClockConfiguration</Name>
+      <Hint>CPU clock configuration type. Index of the pre-configured clock configuration in the CPU component.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* CPU clock configuration type. Index of the pre-configured clock configuration in the CPU component. */\n</PreparedHint>
+      <Type />
+      <HWTestType>8bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TDriverOperationMode</Name>
+      <Hint>Driver operation mode type.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* Driver operation mode type. */\n</PreparedHint>
+      <Type />
+      <HWTestType>8bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TCallback</Name>
+      <Hint>Callback type used for definition of callback functions.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* Callback type used for definition of callback functions.  */\n</PreparedHint>
+      <Type />
+      <HWTestType>pointer</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TDriverState</Name>
+      <Hint>Driver state type.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* Driver state type.   */\n</PreparedHint>
+      <Type />
+      <HWTestType>16bit unsigned</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TRecordType</UsrType>
+      <Name>LDD_SPIMASTER_TStats</Name>
+      <Hint>Communication statistics</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>yes</GenerateHelp>
+      <PreparedHint>typedef struct { /* Communication statistics */\n
+    uint32_t RxChars; /* Number of received characters */\n
+    uint32_t TxChars; /* Number of transmitted characters */\n
+    uint32_t RxParityErrors; /* Number of receiver parity errors, which have occured */\n
+    uint32_t RxOverruns; /* Number of receiver overruns, which have occured */\n
+  } LDD_SPIMASTER_TStats;\n</PreparedHint>
+      <RecordItem>
+        <ItemName>RxChars</ItemName>
+        <ItemType>uint32_t</ItemType>
+        <ItemHint>Number of received characters</ItemHint>
+        <ItemPointer>no</ItemPointer>
+      </RecordItem>
+      <RecordItem>
+        <ItemName>TxChars</ItemName>
+        <ItemType>uint32_t</ItemType>
+        <ItemHint>Number of transmitted characters</ItemHint>
+        <ItemPointer>no</ItemPointer>
+      </RecordItem>
+      <RecordItem>
+        <ItemName>RxParityErrors</ItemName>
+        <ItemType>uint32_t</ItemType>
+        <ItemHint>Number of receiver parity errors, which have occured</ItemHint>
+        <ItemPointer>no</ItemPointer>
+      </RecordItem>
+      <RecordItem>
+        <ItemName>RxOverruns</ItemName>
+        <ItemType>uint32_t</ItemType>
+        <ItemHint>Number of receiver overruns, which have occured</ItemHint>
+        <ItemPointer>no</ItemPointer>
+      </RecordItem>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>LDD_TCallbackParam</Name>
+      <Hint>Callback parameter type used for callback functions.</Hint>
+      <Generate>no</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>no</GenerateHelp>
+      <PreparedHint>/* Callback parameter type used for callback functions. */\n</PreparedHint>
+      <Type />
+      <HWTestType>pointer</HWTestType>
+    </Type>
+  </UserTypes>
+</Interface>
+

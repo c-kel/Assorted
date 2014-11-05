@@ -1,0 +1,110 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProcessorExpertPath}/lib/Kinetis/pdd/inc"</Line>
+        <Line>"${ProcessorExpertPath}/lib/Kinetis/iofiles"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Generated_Code/Cpu.h" FileDate="2014-11-04, 00:46:17" FileAge="1415025977795" FileType="45637" CompNumb="4" />
+      <File Name="Documentation/doxygen/RoutingReport.txt" FileDate="2014-09-22, 17:56:51" FileAge="1411372611177" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2014-11-04, 00:50:49" FileAge="1415026249498" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/TU2.h" FileDate="2014-11-04, 01:06:58" FileAge="1415027218188" FileType="45637" CompNumb="77" />
+      <File Name="Generated_Code/TU2.c" FileDate="2014-11-04, 01:06:58" FileAge="1415027218198" FileType="45637" CompNumb="77" />
+      <File Name="Generated_Code/TU1.h" FileDate="2014-11-04, 00:46:17" FileAge="1415025977569" FileType="45637" CompNumb="15" />
+      <File Name="Static_Code/PDD/PDB_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Documentation/doxygen/PwmLdd2.txt" FileDate="2014-11-04, 00:46:17" FileAge="1415025977730" FileType="45637" CompNumb="18" />
+      <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/TU1.c" FileDate="2014-11-04, 00:46:17" FileAge="1415025977582" FileType="45637" CompNumb="15" />
+      <File Name="Static_Code/PDD/DMAMUX_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Documentation/drive_SIGNALS.txt" FileDate="2014-11-04, 01:06:58" FileAge="1415027218280" FileType="3072" />
+      <File Name="Documentation/doxygen/BitIoLdd4.txt" FileDate="2014-11-04, 00:50:49" FileAge="1415026249452" FileType="45637" CompNumb="35" />
+      <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Documentation/doxygen/TU1.txt" FileDate="2014-11-04, 00:46:17" FileAge="1415025977600" FileType="45637" CompNumb="15" />
+      <File Name="Static_Code/PDD/WDOG_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2014-11-04, 00:50:49" FileAge="1415026249528" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/EInt1.h" FileDate="2014-11-03, 14:53:31" FileAge="1414990411395" FileType="45637" CompNumb="65" />
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2014-11-04, 00:50:49" FileAge="1415026249523" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/EInt1.c" FileDate="2014-11-03, 14:53:31" FileAge="1414990411389" FileType="45637" CompNumb="65" />
+      <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2014-11-04, 00:50:49" FileAge="1415026249472" FileType="45637" />
+      <File Name="Documentation/doxygen/TimerIntLdd1.txt" FileDate="2014-11-04, 01:06:58" FileAge="1415027218238" FileType="45637" CompNumb="59" />
+      <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Documentation/doxygen/PwmLdd1.txt" FileDate="2014-11-04, 00:46:17" FileAge="1415025977675" FileType="45637" CompNumb="14" />
+      <File Name="Documentation/drive_Settings.xml" FileDate="2014-11-04, 01:06:58" FileAge="1415027218344" FileType="3072" />
+      <File Name="Static_Code/PDD/CRC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Static_Code/PDD/FMC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2014-09-22, 17:56:50" FileAge="1411372610912" FileType="16384" CompNumb="4" />
+      <File Name="Generated_Code/LEDR_BUZZER.h" FileDate="2014-11-04, 00:50:49" FileAge="1415026249369" FileType="45637" CompNumb="34" />
+      <File Name="Generated_Code/ExtIntLdd2.h" FileDate="2014-11-03, 14:53:31" FileAge="1414990411403" FileType="45637" CompNumb="66" />
+      <File Name="Documentation/doxygen/drive.txt" FileDate="2014-11-04, 00:50:49" FileAge="1415026249508" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/LEDR_BUZZER.c" FileDate="2014-11-04, 00:50:49" FileAge="1415026249361" FileType="45637" CompNumb="34" />
+      <File Name="Generated_Code/ExtIntLdd2.c" FileDate="2014-11-03, 14:53:31" FileAge="1414990411444" FileType="45637" CompNumb="66" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165279" FileType="45637" />
+      <File Name="Generated_Code/Right_Spd.h" FileDate="2014-11-04, 00:46:17" FileAge="1415025977540" FileType="45637" CompNumb="13" />
+      <File Name="Documentation/drive.txt" FileDate="2014-11-04, 00:50:49" FileAge="1415026249746" FileType="3072" />
+      <File Name="Sources/main.c" FileDate="2014-11-04, 00:52:29" FileAge="1415026349107" FileType="128" />
+      <File Name="Documentation/doxygen/BitIoLdd2.txt" FileDate="2014-11-03, 01:42:30" FileAge="1414942950965" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/Right_Spd.c" FileDate="2014-11-04, 00:46:17" FileAge="1415025977510" FileType="45637" CompNumb="13" />
+      <File Name="Generated_Code/Left_Spd.h" FileDate="2014-11-04, 00:46:17" FileAge="1415025977495" FileType="45637" CompNumb="17" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165275" FileType="45637" />
+      <File Name="Generated_Code/Left_Spd.c" FileDate="2014-11-04, 00:46:17" FileAge="1415025977483" FileType="45637" CompNumb="17" />
+      <File Name="Static_Code/PDD/FTFL_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Sources/Events.h" FileDate="2014-11-04, 00:50:49" FileAge="1415026249549" FileType="131328" />
+      <File Name="Generated_Code/WAIT1.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165300" FileType="45637" CompNumb="57" />
+      <File Name="Sources/Events.c" FileDate="2014-11-04, 01:04:28" FileAge="1415027068678" FileType="131328" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2014-11-03, 01:42:30" FileAge="1414942950814" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/WAIT1.c" FileDate="2014-11-03, 01:46:05" FileAge="1414943165294" FileType="45637" CompNumb="57" />
+      <File Name="Project_Settings/Debugger/MK20DX128.mem" FileDate="2014-09-22, 17:56:51" FileAge="1411372611170" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2014-11-04, 00:50:49" FileAge="1415026249540" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/VREF_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/Right_Dir.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165431" FileType="45637" CompNumb="9" />
+      <File Name="Static_Code/PDD/PDD_Types.h" FileDate="2013-04-18, 00:55:42" FileAge="1366210542000" FileType="262144" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2014-11-03, 01:42:30" FileAge="1414942950799" FileType="8" CompNumb="4" />
+      <File Name="Documentation/doxygen/BitIoLdd1.txt" FileDate="2014-11-03, 01:42:30" FileAge="1414942950986" FileType="45637" CompNumb="10" />
+      <File Name="Generated_Code/BitIoLdd4.h" FileDate="2014-11-04, 00:50:49" FileAge="1415026249384" FileType="45637" CompNumb="35" />
+      <File Name="Generated_Code/Right_Dir.c" FileDate="2014-11-03, 01:46:05" FileAge="1414943165427" FileType="45637" CompNumb="9" />
+      <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/BitIoLdd4.c" FileDate="2014-11-04, 00:50:49" FileAge="1415026249378" FileType="45637" CompNumb="35" />
+      <File Name="Generated_Code/Left_Dir.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165410" FileType="45637" CompNumb="11" />
+      <File Name="Static_Code/PDD/SPI_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165282" FileType="45637" />
+      <File Name="Generated_Code/TimerIntLdd1.h" FileDate="2014-11-04, 01:06:58" FileAge="1415027218119" FileType="45637" CompNumb="59" />
+      <File Name="Static_Code/PDD/EWM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/TI1.h" FileDate="2014-11-04, 01:06:58" FileAge="1415027218107" FileType="45637" CompNumb="58" />
+      <File Name="Static_Code/PDD/SysTick_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Static_Code/PDD/SIM_PDD.h" FileDate="2014-05-14, 12:09:28" FileAge="1400033368000" FileType="262144" />
+      <File Name="Generated_Code/Left_Dir.c" FileDate="2014-11-03, 01:46:05" FileAge="1414943165403" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/TimerIntLdd1.c" FileDate="2014-11-04, 01:06:58" FileAge="1415027218224" FileType="45637" CompNumb="59" />
+      <File Name="Generated_Code/TI1.c" FileDate="2014-11-04, 01:06:58" FileAge="1415027218102" FileType="45637" CompNumb="58" />
+      <File Name="Generated_Code/BitIoLdd2.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165424" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/BitIoLdd2.c" FileDate="2014-11-03, 01:46:05" FileAge="1414943165417" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/BitIoLdd1.h" FileDate="2014-11-03, 01:46:05" FileAge="1414943165445" FileType="45637" CompNumb="10" />
+      <File Name="Static_Code/PDD/SAI_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/BitIoLdd1.c" FileDate="2014-11-03, 01:46:05" FileAge="1414943165438" FileType="45637" CompNumb="10" />
+      <File Name="Static_Code/PDD/DMA_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Static_Code/PDD/ADC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Documentation/doxygen/ExtIntLdd2.txt" FileDate="2014-11-03, 14:53:31" FileAge="1414990411457" FileType="45637" CompNumb="66" />
+      <File Name="Static_Code/PDD/FTM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/PwmLdd2.h" FileDate="2014-11-04, 00:46:17" FileAge="1415025977702" FileType="45637" CompNumb="18" />
+      <File Name="Static_Code/IO_Map/MK20D5.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Static_Code/PDD/CMT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/PwmLdd2.c" FileDate="2014-11-04, 00:46:17" FileAge="1415025977714" FileType="45637" CompNumb="18" />
+      <File Name="Documentation/doxygen/TU2.txt" FileDate="2014-11-04, 01:06:58" FileAge="1415027218212" FileType="45637" CompNumb="77" />
+      <File Name="Static_Code/PDD/USBDCD_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392866326000" FileType="262144" />
+      <File Name="Generated_Code/PwmLdd1.h" FileDate="2014-11-04, 00:46:17" FileAge="1415025977614" FileType="45637" CompNumb="14" />
+      <File Name="Generated_Code/PwmLdd1.c" FileDate="2014-11-04, 00:46:17" FileAge="1415025977648" FileType="45637" CompNumb="14" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>17</CodeGenReference>
+</CodeGenerationInfo>

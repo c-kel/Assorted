@@ -1,0 +1,1 @@
+/home/pi/Lab11_pi/CMakeFiles/lab11.dir

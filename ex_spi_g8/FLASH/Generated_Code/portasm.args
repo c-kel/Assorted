@@ -1,0 +1,11 @@
+-mcpu=cortex-m4
+-mthumb
+-mfloat-abi=soft
+-g3
+-gdwarf-2
+-gstrict-dwarf
+-x assembler-with-cpp
+-I"C:/Repos/Christopher-Kellie-Labs/ex_spi_g8/Generated_Code"
+-Wall
+-c
+-fmessage-length=0

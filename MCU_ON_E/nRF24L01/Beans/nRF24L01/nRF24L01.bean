@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bean>
+  <Header>
+    <Name>nRF24L01</Name>
+    <Description />
+    <Author />
+    <Version>01.000</Version>
+    <Icon>DEFAULT</Icon>
+    <TypesFiles>PE,nRF24L01\nRF24L01</TypesFiles>
+    <FileVersion>6</FileVersion>
+  </Header>
+  <Options>
+    <SaveInspectorTabsViewUIStyle>true</SaveInspectorTabsViewUIStyle>
+    <DemoDriver>no</DemoDriver>
+    <Category>SW-User Components</Category>
+    <BeanLevel>Low</BeanLevel>
+    <Copyright>For non-commercial use only.
+(c) Copyright &lt;company/user-name&gt;, 2014
+http://www.&lt;company&gt;.com
+mail: info@&lt;company&gt;.com</Copyright>
+    <BW_HelpType>Default</BW_HelpType>
+    <BW_HelpFiles>,Properties,Methods,Events,"User Types"</BW_HelpFiles>
+  </Options>
+  <PropertyList>
+    <Property>
+      <TCompNameItem>
+        <Name>Component Name</Name>
+        <Symbol>DeviceName</Symbol>
+        <Hint>Name of the component.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_StringStyle>EDITBOX</UI_StringStyle>
+        <DefaultValue />
+      </TCompNameItem>
+    </Property>
+    <Property>
+      <TEnumItem>
+        <Name>Primary Function</Name>
+        <Symbol>Property</Symbol>
+        <TypeSpec>PropertyType_PrimFunc</TypeSpec>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_EnumStyle>COMBO</UI_EnumStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <TypeAssignment>BEAN_FILE</TypeAssignment>
+      </TEnumItem>
+    </Property>
+    <Property>
+      <TEnumItem>
+        <Name>Operating Frequency</Name>
+        <Symbol>Property_0</Symbol>
+        <TypeSpec>PropertyType_OpFreq</TypeSpec>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_EnumStyle>COMBO</UI_EnumStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>45</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <TypeAssignment>BEAN_FILE</TypeAssignment>
+      </TEnumItem>
+    </Property>
+    <Property>
+      <TRealItem>
+        <Name>Payload Width</Name>
+        <Symbol>Property_1</Symbol>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_RealNumStyle>EDITBOX</UI_RealNumStyle>
+        <DefaultValue>1</DefaultValue>
+        <MinValue>1</MinValue>
+        <MaxValue>32</MaxValue>
+        <ShowHighPrec>false</ShowHighPrec>
+        <RuntimeProperty>false</RuntimeProperty>
+      </TRealItem>
+    </Property>
+    <Property>
+      <TRealItem>
+        <Name>Operating Address</Name>
+        <Symbol>Property_2</Symbol>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_RealNumStyle>EDITBOX</UI_RealNumStyle>
+        <DefaultValue>0</DefaultValue>
+        <MinValue>0</MinValue>
+        <MaxValue>1099511627775</MaxValue>
+        <ShowHighPrec>false</ShowHighPrec>
+        <RuntimeProperty>false</RuntimeProperty>
+      </TRealItem>
+    </Property>
+    <Property>
+      <TInhrItem>
+        <Name>SPIMaster_LDD</Name>
+        <Symbol>SPIMaster_LDD</Symbol>
+        <TypeSpec>nRF24L01\ExtInt_LDD</TypeSpec>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_EnumStyle>COMBO</UI_EnumStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>-1</DefaultIndex>
+        <TextValueIndex>false</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <InhrBeanBaseName>Inhr</InhrBeanBaseName>
+        <ShowInheritedMethodsEventsInPrjTree>false</ShowInheritedMethodsEventsInPrjTree>
+      </TInhrItem>
+    </Property>
+    <Property>
+      <TInhrLinkItem>
+        <Name>ExtInt_LDD</Name>
+        <Symbol>ExtInt_LDD</Symbol>
+        <TypeSpec>nRF24L01\ExtInt_LDD</TypeSpec>
+        <Hint>Link component  (for details about settings see &amp;lt;a href="../../DOCs/InheritanceAndSharing.html"&amp;gt;Component Inheritance &amp;amp;amp; Component Sharing&amp;lt;/a&amp;gt;).</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_EnumStyle>COMBO</UI_EnumStyle>
+        <DefaultValue />
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <SortStyle />
+        <DefaultComponentSubFolder>Referenced_Components</DefaultComponentSubFolder>
+      </TInhrLinkItem>
+    </Property>
+  </PropertyList>
+  <MethodList>
+    <Method>
+      <TMthdItem>
+        <Name>Method</Name>
+        <Symbol>Method</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_BoolStyle>DROPDOWN</UI_BoolStyle>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <DefaultValue>true</DefaultValue>
+        <Popup>false</Popup>
+        <PublicMethod>true</PublicMethod>
+        <IsAssembler>false</IsAssembler>
+        <InDefinition>true</InDefinition>
+        <ReturnType>void</ReturnType>
+        <RetHint />
+        <ParamCount>0</ParamCount>
+        <Scope>PRIVATE</Scope>
+      </TMthdItem>
+    </Method>
+  </MethodList>
+  <EventList>
+    <Event>
+      <TStrgItem>
+        <Name>Event module name</Name>
+        <Symbol>EventModule</Symbol>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_StringStyle>EDITBOX</UI_StringStyle>
+        <DefaultValue />
+        <StrDefine>nothing</StrDefine>
+        <MinLength>0</MinLength>
+        <MaxLength>-1</MaxLength>
+      </TStrgItem>
+    </Event>
+    <Event>
+      <TEvntItem>
+        <Name>Event</Name>
+        <Symbol>Event</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint />
+        <ItemLevel>BASIC</ItemLevel>
+        <BoldName>true</BoldName>
+        <EditLine>false</EditLine>
+        <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+        <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+        <UI_GroupStyle>GROUP</UI_GroupStyle>
+        <UI_Layout>DEFAULT</UI_Layout>
+        <UI_NumColumnsInWrappedLayout>4</UI_NumColumnsInWrappedLayout>
+        <UI_ValueSelectionStyle>DROPDOWN</UI_ValueSelectionStyle>
+        <Description>generate code</Description>
+        <Expanded>Yes</Expanded>
+        <DefaultValue>true</DefaultValue>
+        <DefineSymbol>YES_NO</DefineSymbol>
+        <IfDisabled>setNOTHING</IfDisabled>
+        <IsAssembler>false</IsAssembler>
+        <ParamCount>0</ParamCount>
+        <Scope>PUBLISHED</Scope>
+        <Declarations>
+          <ANSIC>void #C#(void)</ANSIC>
+        </Declarations>
+        <Children>
+          <GrupItem>
+            <TEvntName>
+              <Name>Event procedure name</Name>
+              <Symbol>Name</Symbol>
+              <Hint>Event procedure name</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <EditLine>true</EditLine>
+              <UI_DisplayIn>TABLE_AND_GRAPHICAL_VIEW</UI_DisplayIn>
+              <UI_DisplayExtraText>DISPLAY_AUTO_POSITION</UI_DisplayExtraText>
+              <UI_StringStyle>EDITBOX</UI_StringStyle>
+              <DefaultValue />
+              <StrDefine>nothing</StrDefine>
+              <MinLength>0</MinLength>
+              <MaxLength>-1</MaxLength>
+              <ErrorIfNotSet>true</ErrorIfNotSet>
+              <IdentType>EVNT</IdentType>
+            </TEvntName>
+          </GrupItem>
+        </Children>
+      </TEvntItem>
+    </Event>
+  </EventList>
+  <Links>
+    <EmptySection_DummyValue />
+  </Links>
+</Bean>
+

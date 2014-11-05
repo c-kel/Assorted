@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Lab11_pi/src/main.cpp
+stdio.h
+-
+termios.h
+-
+fcntl.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netdb.h
+-
+string.h
+-
+arpa/inet.h
+-
+netinet/in.h
+-
+netinet/tcp.h
+-
+curl/curl.h
+-
+

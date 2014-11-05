@@ -1,0 +1,1 @@
+/home/pi/lab6/CMakeFiles/main.dir

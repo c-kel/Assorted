@@ -1,0 +1,12 @@
+bbbggn3
+Public URL
+
+http://data.sparkfun.com/streams/Jx4EvYEj2VuL59oVNZdx
+Public Key
+
+Jx4EvYEj2VuL59oVNZdx
+Private Key
+
+gz6pGopnA8h57m6kWEGD
+Keep this key secret, and in a safe place.  You will not be able to retrieve it.
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Constants defined in the component-->
+<!--[CONSTANTS]-->
+<!--Count=<number of constants>-->
+<!--[CONST]-->
+<!--Name=<name of the constant - identifier>-->
+<!--Value=<VALUE of the constant>-->
+<!--UseDocValue=yes/no-->
+<!--DocValue=<value of the constant just for the help documentation>-->
+<!--Descr=<DESCRIPTION of the constant - for generated documentation>-->
+<!--Type=<type of the constant>-->
+<!--Unique=<yes/no> if the constant should be unique - the name of the component is used as prefix>-->
+<!--GenHelp=<yes/no> generate this constant to the documentation?-->
+<!--GenDrv=<yes/no> generate this constant to the driver?-->
+<!--VersionSpecific=version specific line-->
+<!--VersionFeatureSpecific=feature specific lines - new lines are created by "\n"-->
+<!--VersionFeatureHint=feature specific hint lines - new lines are created by "\n"-->
+<!--[INCLUDES]-->
+<!--;include another cns file - relative path from ProcessorExpert directory, e.g.-->
+<!--beans\Shared\AllTimers.cns-->
+<!--[_end_]-->
+<CONSTANTS>
+  <CONST>
+    <Name>Constant</Name>
+    <Value />
+    <Descr />
+    <Type>16bit signed</Type>
+    <Unique>true</Unique>
+    <GenHelp>true</GenHelp>
+    <GenDrv>true</GenDrv>
+    <VersionSpecific />
+  </CONST>
+  <INCLUDES>
+    <EmptySection_DummyValue />
+  </INCLUDES>
+</CONSTANTS>
+

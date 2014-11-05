@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/lab6/main.cpp
+fcntl.h
+-
+termios.h
+-
+stdio.h
+-
+string.h
+-
+unistd.h
+-
+errno.h
+-
+
